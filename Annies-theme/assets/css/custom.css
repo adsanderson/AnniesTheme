@@ -1,51 +1,45 @@
 h1, h2, h3, h4, h5 {
      font-family: 'Poiret One';
  }
- .page-title {
-     color: #FFF4E4;
-	text-align: center;
+.page-title {
+  color: #fff;
+  text-align: center;
 	font-size: 13rem;
 	font-weight: 100;
-     font-family: 'Poiret One';
+  font-family: 'Poiret One';
 	text-transform: uppercase;
-     text-shadow: 3px 3px 0 #111;
- }
- .page-description {
-     color: #fff4e4;
-     font-family: 'Poiret One';
- }
+  text-shadow: 3px 3px 0 #333;
+  margin: 0 0 52px 0;
+}
+.page-description {
+  color: #333;
+  font-family: 'Poiret One';
+  font-size: 1.5em;
+}
  header > div.vertical {
      vertical-align: top;
  }
  header div.main-header-content.inner {
      max-width: 1200px;
+     width: 100%;
  }
  .nav-closed .menu-button  {
-     color: #111;
-     border-color: #111;
+     color: #333;
+     border-color: #333;
  }
 
 .as-social a {
-     // text-align: center;
-     // left: 50%;
-     // margin-left: -96px;
-     // position: absolute;
-     // bottom: 146px;
-     font-size: 3rem;
-     color: #FFF4E4;
+  font-size: 3rem;
+  color: #FFF;
 }
-// .scroll-down:hover {
-//      color: #FFF4E4;
-//      text-shadow: 3px 3px 0 #111;
-// }
 .scroll-down.fa {
      font-size: 3rem;
-     color: #FFF4E4;
-     text-shadow: 3px 3px 0 #111;
+     color: #FFF;
+     text-shadow: 2px 3px 0 #333;
 }
 
 .as-nav-links a {
-     text-shadow: 1px 1px 0 #111;
+     text-shadow: 1px 1px 0 #333;
      margin: 0 15px;
      text-decoration: none;
 }
