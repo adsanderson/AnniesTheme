@@ -53,4 +53,9 @@
         });
 
     };
+
+    var video = document.getElementById('video');
+document.addEventListener('mousedown',function(){
+  video.play();
+},false);
 })(jQuery);
