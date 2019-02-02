@@ -2,12 +2,13 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
-<header class="main-header">
-  <!-- <video class="main-header__video" src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/16266996.mp4" {{#if @blog.cover}} poster="url({{@blog.cover}})"{{/if}} autoplay="autoplay" loop="loop" muted="muted" preload="auto"></video> -->
-  <video class="main-header__video" autoplay="autoplay" id="video" loop="loop" muted="muted" preload="auto" poster="http://anniesanderson.co.uk/content/images/2016/07/x1907351_10154964409825453_5646112862715309045_n-1.jpg.pagespeed.ic.G7lzkRYYzl.webp">
-      <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_480.webm" type="video/webm">
-      <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_480.mp4" type="video/mp4">
-  </video>
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+  <!-- <video class="main-header__video" src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_720.webm" {{#if @blog.cover}} poster="url({{@blog.cover}})"{{/if}} autoplay="autoplay" loop="loop" muted="muted" preload="auto"></video> 
+  <video class="main-header__video" autoplay="autoplay" id="video" loop="loop" muted="muted" preload="auto">
+    <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_720.webm" type="video/webm">
+    <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_480.webm" type="video/webm">
+    <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_480.mp4" type="video/mp4">
+  </video> -->
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
     </nav>
@@ -44,7 +45,7 @@
 
 {{! The main content area on the homepage }}
 <main id="content" class="content" role="main">
-
+    {{!-- <div id="instaRoll" class="instaRoll"></div> --}}
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}
 

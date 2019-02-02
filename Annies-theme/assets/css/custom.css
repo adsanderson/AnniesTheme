@@ -72,9 +72,20 @@ span.as-social-bg {
      padding: 4rem;
      background-color: white;
 }
+@media only screen and (min-width: 501px) {
+  .post-content img{
+    max-width: 90%;
+  }
+}
 .post-wrap {
      background-position: center;
      background-size: 100%;
      padding: 1rem;
      margin-bottom: 5rem;
 }
+
+.instaRoll {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
