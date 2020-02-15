@@ -3,8 +3,8 @@
 
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
 <header class="main-header tag-head {{#if tag.feature}}"
-    style="background-image: url({{tag.feature}}){{else}}{{#if @blog.cover}}"
-    style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+    style="background-image: url({{tag.feature}}){{else}}{{#if @site.cover_image}}"
+    style="background-image: url({{@site.cover_image}}){{else}}no-cover{{/if}}{{/if}}">
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}"
                 alt="{{@blog.title}}" /></a>{{/if}}
