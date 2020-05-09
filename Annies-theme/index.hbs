@@ -2,19 +2,21 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
-<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-  <!-- <video class="main-header__video" src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_720.webm" {{#if @blog.cover}} poster="url({{@blog.cover}})"{{/if}} autoplay="autoplay" loop="loop" muted="muted" preload="auto"></video> 
+<header class="main-header {{#if @site.cover_image}}"
+    style="background-image: url({{@site.cover_image}}){{else}}no-cover{{/if}}">
+    <!-- <video class="main-header__video" src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_720.webm" {{#if @site.cover_image}} poster="url({{@site.cover_image}})"{{/if}} autoplay="autoplay" loop="loop" muted="muted" preload="auto"></video> 
   <video class="main-header__video" autoplay="autoplay" id="video" loop="loop" muted="muted" preload="auto">
     <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_720.webm" type="video/webm">
     <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_480.webm" type="video/webm">
     <source src="https://s3-eu-west-1.amazonaws.com/anniesanderson-blog-uploads/Stone_480.mp4" type="video/mp4">
   </video> -->
     <nav class="main-nav overlay clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @site.logo}}<a class="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}"
+                alt="{{@site.title}}" /></a>{{/if}}
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">{{@blog.title}}</h1>
+            <h1 class="page-title">{{@site.title}}</h1>
             <h2 class="as-nav-links as-social">
                 <a href="/About/" class="fa-stack">
                     <span class="as-social-bg fa fa-circle fa-stack-1x"></span>
@@ -37,10 +39,10 @@
                     <span class="fa fa-instagram fa-stack-1x"></span>
                 </a>
             </h2>
-            <h2 class="page-description">{{@blog.description}}</h2>
         </div>
     </div>
-    <a class="scroll-down fa fa-chevron-down" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    <a class="scroll-down fa fa-chevron-down" href="#content" data-offset="-45"><span class="hidden">Scroll
+            Down</span></a>
 </header>
 
 {{! The main content area on the homepage }}
